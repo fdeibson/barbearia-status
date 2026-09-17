@@ -1,23 +1,35 @@
-# Modelo para o repositório PÚBLICO fdeibson/barbearia-status.
-# Copiar para .github/workflows/monitor.yml (ver status-page/README.md).
+# Repositório PÚBLICO fdeibson/barbearia-status (fonte: status-page/github/
+# workflow.yml no monorepo).
 #
 # A cada ~5 min: verifica os serviços, grava site/data/status.json no próprio
 # repositório (histórico = persistência) e publica site/ no GitHub Pages.
 #
+# Gatilhos (redundantes de propósito):
+# - `schedule`: agendador do GitHub. No repositório novo ele não disparou nas
+#   primeiras horas (fila do GitHub, fora do nosso controle) — mantido como
+#   reserva, não como único gatilho.
+# - `push` na branch `tick`: disparo externo. Agendadores fora do GitHub
+#   (cron da VPS e Agendador de Tarefas de outra máquina) fazem push forçado
+#   de um commit vazio nessa branch, cada um com sua deploy key (escrita só
+#   neste repositório público — nenhum token pessoal). As verificações em si
+#   continuam rodando nos runners do GitHub, fora da VPS.
+# - `workflow_dispatch`: manual.
+# Vários gatilhos no mesmo intervalo não geram verificação em excesso: se o
+# status publicado tem menos de 4 min, a rodada termina sem verificar.
+#
 # Por que o deploy fica AQUI e não só no pages.yml: commits feitos com o
 # GITHUB_TOKEN não disparam outros workflows (evento push), então o pages.yml
-# nunca rodaria depois do commit do bot. Deploy via workflow próprio também
-# não tem o limite de ~10 builds/hora do Pages "a partir de branch".
+# nunca rodaria depois do commit do bot.
 
 name: Monitor
 
 on:
   schedule:
-    # Mínimo permitido pelo GitHub. Pode atrasar ou pular sob carga — a página
-    # mostra a hora real da última verificação e vira "Desconhecido" se ficar velha.
     # Minutos deslocados (não 0/5/10...) — o GitHub recomenda evitar o início
     # exato da hora, horário de maior fila nos agendamentos.
     - cron: "2-59/5 * * * *"
+  push:
+    branches: [tick]
   workflow_dispatch:
 
 # Nunca duas rodadas ao mesmo tempo escrevendo o status.json.
@@ -45,10 +57,16 @@ jobs:
         with:
           node-version: 22
 
+      - name: Rodada necessária?
+        id: fresh
+        run: node monitor/should-run.mjs site/data/status.json
+
       - name: Verificar serviços
+        if: steps.fresh.outputs.run == 'true'
         run: node monitor/check.mjs site/data/status.json
 
       - name: Commitar status.json (só se mudou)
+        if: steps.fresh.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -70,14 +88,16 @@ jobs:
           exit 1
 
       - name: Empacotar site para o Pages
-        if: always()
+        if: always() && steps.fresh.outputs.run == 'true'
         uses: actions/upload-pages-artifact@v5
         with:
           path: site/
+    outputs:
+      ran: ${{ steps.fresh.outputs.run }}
 
   deploy:
     needs: check
-    if: always() && needs.check.result != 'cancelled'
+    if: always() && needs.check.result != 'cancelled' && needs.check.outputs.ran == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     permissions:
