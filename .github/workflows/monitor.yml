@@ -1,0 +1,93 @@
+# Modelo para o repositório PÚBLICO fdeibson/barbearia-status.
+# Copiar para .github/workflows/monitor.yml (ver status-page/README.md).
+#
+# A cada ~5 min: verifica os serviços, grava site/data/status.json no próprio
+# repositório (histórico = persistência) e publica site/ no GitHub Pages.
+#
+# Por que o deploy fica AQUI e não só no pages.yml: commits feitos com o
+# GITHUB_TOKEN não disparam outros workflows (evento push), então o pages.yml
+# nunca rodaria depois do commit do bot. Deploy via workflow próprio também
+# não tem o limite de ~10 builds/hora do Pages "a partir de branch".
+
+name: Monitor
+
+on:
+  schedule:
+    # Mínimo permitido pelo GitHub. Pode atrasar ou pular sob carga — a página
+    # mostra a hora real da última verificação e vira "Desconhecido" se ficar velha.
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+# Nunca duas rodadas ao mesmo tempo escrevendo o status.json.
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Verificar serviços
+        run: node monitor/check.mjs site/data/status.json
+
+      - name: Commitar status.json (só se mudou)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/status.json
+          if git diff --cached --quiet; then
+            echo "Sem mudanças."
+            exit 0
+          fi
+          git commit -m "chore(status): verificação $(date -u +%Y-%m-%dT%H:%MZ)"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rejeitado (tentativa $attempt); rebase sobre o remoto..."
+            sleep $((attempt * 3))
+            # Em conflito no status.json, mantém a versão desta rodada (mais nova).
+            git pull --rebase -X theirs origin main || { git rebase --abort; exit 1; }
+          done
+          exit 1
+
+      - name: Empacotar site para o Pages
+        if: always()
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/
+
+  deploy:
+    needs: check
+    if: always() && needs.check.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
