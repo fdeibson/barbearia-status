@@ -148,29 +148,30 @@ Variáveis: `STATUS_DATA_FILE` (caminho do JSON, se não vier como argumento),
 `STATUS_BASE_URL` (troca o host verificado; a URL exibida continua a de
 produção), `STATUS_SERVICES` (outro `services.json`).
 
-## Modo em produção hoje: servida pelo app, monitor na VPS
+## Em produção hoje (2026-09-17)
 
-A criação do repositório público `fdeibson/barbearia-status` (GitHub Pages)
-ficou **pendente** — exige aprovação explícita do dono da conta pra criar
-uma superfície pública nova (ver `TASK_STATE.md`). Enquanto isso, a mesma
-página roda assim:
+**Principal — independente da VPS**: repositório público
+`fdeibson/barbearia-status` (criado com autorização explícita do dono da
+conta), GitHub Pages por Actions, domínio `https://status.hostcapixaba.com.br`
+(CNAME `status` → `fdeibson.github.io.` no DNS do cPanel, HTTPS forçado) e
+`https://fdeibson.github.io/barbearia-status/`. Lá existe `site/CNAME`, que
+não fica neste monorepo.
 
-- **Site**: cópia idêntica de `site/` em `apps/web/public/status`, servida
-  em `https://barbearia.hostcapixaba.com.br/status` (redireciona pra
-  `/status/index.html`). `apps/web/src/lib/status-page-sync.test.ts` falha
-  se a cópia divergir desta pasta — edite aqui e copie pra lá.
+**Secundária — mesma VPS**: a mesma página em
+`https://barbearia.hostcapixaba.com.br/status`:
+
+- **Site**: cópia idêntica de `site/` em `apps/web/public/status`
+  (redireciona pra `/status/index.html`). `apps/web/src/lib/status-page-sync.test.ts`
+  falha se a cópia divergir desta pasta — edite aqui e copie pra lá (e pro
+  repositório público).
 - **Dados**: `GET /status/data/status.json` lê `STATUS_DATA_DIR`
   (`/opt/barbearia/status-data` montado somente leitura no container).
   Sem arquivo → 404 → a página mostra "Desconhecido".
 - **Monitor**: `monitor/run-on-vps.sh` no crontab do `wwhost`, a cada 5 min,
-  num container `node:22-alpine` descartável — fora dos containers do app,
-  batendo no domínio público (passa pelo Apache, como um visitante).
+  num container `node:22-alpine` descartável, batendo no domínio público.
 
-Limitação deste modo (por isso o GitHub Pages continua sendo o alvo): a
-página e o monitor dependem da mesma VPS. Com o app fora do ar, o monitor
-registra a queda normalmente, mas a página só volta a ser vista quando o
-app volta; com a VPS inteira fora, não há verificação nenhuma nesse
-intervalo e ele aparece como "Sem dados" — nunca como disponível.
+A secundária depende da VPS (com a VPS fora, não há verificação nesse
+intervalo e ele aparece como "Sem dados"); a principal não.
 
 ## Publicação (repositório `fdeibson/barbearia-status`)
 
