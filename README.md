@@ -157,6 +157,12 @@ conta), GitHub Pages por Actions, domínio `https://status.hostcapixaba.com.br`
 `https://fdeibson.github.io/barbearia-status/`. Lá existe `site/CNAME`, que
 não fica neste monorepo.
 
+**Gatilhos**: o agendador do GitHub não disparou neste repositório; quem
+dispara é um push na branch `tick` feito por `monitor/tick.sh` agendado na VPS
+(a cada 5 min) e no Windows (a cada 10 min), cada um com deploy key própria
+(escrita só no repositório de status). `monitor/should-run.mjs` pula a rodada
+se o status publicado tiver menos de 4 min. Detalhes em DEPLOY.md seção 10.
+
 **Secundária — mesma VPS**: a mesma página em
 `https://barbearia.hostcapixaba.com.br/status`:
 
