@@ -1,0 +1,101 @@
+{
+ "schemaVersion": 1,
+ "generatedAt": "2026-09-17T12:43:37.757Z",
+ "monitoringSince": "2026-09-17T12:43:37.757Z",
+ "services": [
+  {
+   "id": "web",
+   "name": "Aplicação web",
+   "url": "https://barbearia.hostcapixaba.com.br/login",
+   "firstSeenOkAt": null,
+   "current": {
+    "state": "up",
+    "checkedAt": "2026-09-17T12:43:37.702Z",
+    "httpStatus": 200,
+    "latencyMs": 473
+   },
+   "daily": {
+    "2026-09-17": {
+     "up": 1,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 1
+    }
+   },
+   "recent": [
+    {
+     "at": "2026-09-17T12:43:37.702Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 473
+    }
+   ],
+   "description": "Login e painel da barbearia",
+   "type": "http"
+  },
+  {
+   "id": "booking",
+   "name": "Página pública de agendamento",
+   "url": "https://barbearia.hostcapixaba.com.br/b/barbearia-teste",
+   "firstSeenOkAt": null,
+   "current": {
+    "state": "up",
+    "checkedAt": "2026-09-17T12:43:37.707Z",
+    "httpStatus": 200,
+    "latencyMs": 433
+   },
+   "daily": {
+    "2026-09-17": {
+     "up": 1,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 1
+    }
+   },
+   "recent": [
+    {
+     "at": "2026-09-17T12:43:37.707Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 433
+    }
+   ],
+   "description": "Página onde o cliente agenda o horário",
+   "type": "http"
+  },
+  {
+   "id": "api-db",
+   "name": "API e banco de dados",
+   "url": "https://barbearia.hostcapixaba.com.br/api/health",
+   "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
+   "current": {
+    "state": "up",
+    "checkedAt": "2026-09-17T12:43:37.757Z",
+    "httpStatus": 200,
+    "latencyMs": 481
+   },
+   "daily": {
+    "2026-09-17": {
+     "up": 1,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 1
+    }
+   },
+   "recent": [
+    {
+     "at": "2026-09-17T12:43:37.757Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 481
+    }
+   ],
+   "description": "Servidor da aplicação e conexão com o banco",
+   "type": "health"
+  }
+ ],
+ "incidents": []
+}
