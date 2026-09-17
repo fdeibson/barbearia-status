@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-09-17T12:43:37.757Z",
+ "generatedAt": "2026-09-17T14:56:51.251Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -10,17 +10,17 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "up",
-    "checkedAt": "2026-09-17T12:43:37.702Z",
+    "checkedAt": "2026-09-17T14:56:51.170Z",
     "httpStatus": 200,
-    "latencyMs": 473
+    "latencyMs": 615
    },
    "daily": {
     "2026-09-17": {
-     "up": 1,
+     "up": 2,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 1
+     "total": 2
     }
    },
    "recent": [
@@ -29,6 +29,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 473
+    },
+    {
+     "at": "2026-09-17T14:56:51.170Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 615
     }
    ],
    "description": "Login e painel da barbearia",
@@ -41,17 +47,17 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "up",
-    "checkedAt": "2026-09-17T12:43:37.707Z",
+    "checkedAt": "2026-09-17T14:56:51.191Z",
     "httpStatus": 200,
-    "latencyMs": 433
+    "latencyMs": 463
    },
    "daily": {
     "2026-09-17": {
-     "up": 1,
+     "up": 2,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 1
+     "total": 2
     }
    },
    "recent": [
@@ -60,6 +66,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 433
+    },
+    {
+     "at": "2026-09-17T14:56:51.191Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 463
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -72,17 +84,17 @@
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
     "state": "up",
-    "checkedAt": "2026-09-17T12:43:37.757Z",
+    "checkedAt": "2026-09-17T14:56:51.251Z",
     "httpStatus": 200,
-    "latencyMs": 481
+    "latencyMs": 522
    },
    "daily": {
     "2026-09-17": {
-     "up": 1,
+     "up": 2,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 1
+     "total": 2
     }
    },
    "recent": [
@@ -91,6 +103,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 481
+    },
+    {
+     "at": "2026-09-17T14:56:51.251Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 522
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
