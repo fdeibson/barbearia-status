@@ -74,6 +74,12 @@ jobs:
 
       - name: Rodada necessária?
         id: fresh
+        # `origem` distingue o clique humano ("manual") do agendador externo
+        # que usa o MESMO gatilho a cada poucos minutos — sem isso, todo tique
+        # do cron-job.org forçaria verificação e deploy, furando a proteção de
+        # frescor que existe justamente pra vários gatilhos não se somarem.
+        env:
+          DISPATCH_ORIGIN: ${{ inputs.origem }}
         run: node monitor/should-run.mjs site/data/status.json
 
       - name: Verificar serviços
