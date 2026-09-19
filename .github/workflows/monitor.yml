@@ -1,0 +1,136 @@
+# Repositório PÚBLICO fdeibson/barbearia-status (fonte: status-page/github/
+# workflow.yml no monorepo).
+#
+# A cada ~5 min: verifica os serviços, grava site/data/status.json no próprio
+# repositório (histórico = persistência) e publica site/ no GitHub Pages.
+#
+# Gatilhos (redundantes de propósito):
+# - `schedule`: agendador do GitHub. No repositório novo ele não disparou nas
+#   primeiras horas (fila do GitHub, fora do nosso controle) — mantido como
+#   reserva, não como único gatilho.
+# - `push` na branch `tick`: disparo externo. Agendadores fora do GitHub
+#   (cron da VPS e Agendador de Tarefas de outra máquina) fazem push forçado
+#   de um commit vazio nessa branch, cada um com sua deploy key (escrita só
+#   neste repositório público — nenhum token pessoal). As verificações em si
+#   continuam rodando nos runners do GitHub, fora da VPS.
+# - `workflow_dispatch`: manual.
+# Vários gatilhos no mesmo intervalo não geram verificação em excesso: se o
+# status publicado tem menos de 4 min, a rodada termina sem verificar.
+#
+# Por que o deploy fica AQUI e não só no pages.yml: commits feitos com o
+# GITHUB_TOKEN não disparam outros workflows (evento push), então o pages.yml
+# nunca rodaria depois do commit do bot.
+
+name: Monitor
+
+on:
+  schedule:
+    # Minutos deslocados (não 0/5/10...) — o GitHub recomenda evitar o início
+    # exato da hora, horário de maior fila nos agendamentos.
+    - cron: "2-59/5 * * * *"
+  push:
+    branches: [tick]
+  # `workflow_dispatch` também é o gatilho de agendador externo por HTTP
+  # (ex.: cron-job.org): POST em
+  # /repos/fdeibson/barbearia-status/actions/workflows/monitor.yml/dispatches
+  # com `Authorization: Bearer <token>` — token fine-grained com permissão
+  # "Actions: Read and write" SÓ neste repositório público, guardado no
+  # serviço, nunca no repositório, na URL ou em log. `origem` só identifica
+  # quem disparou (aparece no nome da execução), não muda o que roda.
+  workflow_dispatch:
+    inputs:
+      origem:
+        description: "Quem disparou (ex.: cron-job.org, manual)"
+        required: false
+        default: "manual"
+
+run-name: >-
+  Monitor (${{ github.event_name == 'workflow_dispatch' && format('dispatch {0}', inputs.origem) || github.event_name }})
+
+# Nunca duas rodadas ao mesmo tempo escrevendo o status.json.
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Rodada necessária?
+        id: fresh
+        # `origem` distingue o clique humano ("manual") do agendador externo
+        # que usa o MESMO gatilho a cada poucos minutos — sem isso, todo tique
+        # do cron-job.org forçaria verificação e deploy, furando a proteção de
+        # frescor que existe justamente pra vários gatilhos não se somarem.
+        env:
+          DISPATCH_ORIGIN: ${{ inputs.origem }}
+        run: node monitor/should-run.mjs site/data/status.json
+
+      - name: Verificar serviços
+        if: steps.fresh.outputs.run == 'true'
+        run: node monitor/check.mjs site/data/status.json
+
+      - name: Commitar status.json (só se mudou)
+        if: steps.fresh.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/status.json
+          if git diff --cached --quiet; then
+            echo "Sem mudanças."
+            exit 0
+          fi
+          git commit -m "chore(status): verificação $(date -u +%Y-%m-%dT%H:%MZ)"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push rejeitado (tentativa $attempt); rebase sobre o remoto..."
+            sleep $((attempt * 3))
+            # Em conflito no status.json, mantém a versão desta rodada (mais nova).
+            git pull --rebase -X theirs origin main || { git rebase --abort; exit 1; }
+          done
+          exit 1
+
+      - name: Empacotar site para o Pages
+        if: always() && steps.fresh.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site/
+    outputs:
+      ran: ${{ steps.fresh.outputs.run }}
+
+  deploy:
+    needs: check
+    if: always() && needs.check.result != 'cancelled' && needs.check.outputs.ran == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
+    steps:
+      - name: Publicar no GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
