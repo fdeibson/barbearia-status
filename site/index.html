@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Status do BarberPro</title>
+    <meta
+      name="description"
+      content="Disponibilidade em tempo real do BarberPro: aplicação web, página de agendamento e API, com histórico de 90 dias e incidentes."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f6f4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="assets/logo-icon.png" />
+    <link rel="preload" href="assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script type="module" src="assets/app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="https://barbearia.hostcapixaba.com.br/" aria-label="BarberPro — ir para o site">
+          <img src="assets/logo-icon.png" alt="" width="32" height="32" />
+          <span class="brand-name">BarberPro</span>
+        </a>
+        <span class="header-tag">Status do sistema</span>
+      </div>
+    </header>
+
+    <main id="conteudo" class="container">
+      <section class="overall" id="overall" data-state="loading" aria-live="polite" aria-busy="true">
+        <span class="overall-icon" aria-hidden="true"></span>
+        <div class="overall-text">
+          <h1 id="overall-title">Carregando status…</h1>
+          <p id="overall-detail" class="overall-detail"></p>
+        </div>
+      </section>
+
+      <div id="stale-warning" class="notice notice-warning" role="alert" hidden></div>
+
+      <p class="last-check" id="last-check"></p>
+
+      <section class="card" aria-labelledby="services-title">
+        <div class="card-head">
+          <h2 id="services-title">Serviços</h2>
+          <p class="card-sub" id="window-label">Disponibilidade nos últimos 90 dias</p>
+        </div>
+        <ul class="services" id="services">
+          <li class="service service-placeholder" aria-hidden="true"></li>
+        </ul>
+        <ul class="legend" aria-label="Legenda das barras">
+          <li><span class="swatch" data-level="ok"></span>100% no ar</li>
+          <li><span class="swatch" data-level="partial"></span>Instabilidade parcial</li>
+          <li><span class="swatch" data-level="major"></span>Indisponibilidade relevante</li>
+          <li><span class="swatch" data-level="nodata"></span>Sem dados</li>
+        </ul>
+      </section>
+
+      <section class="card" aria-labelledby="incidents-title">
+        <div class="card-head">
+          <h2 id="incidents-title">Histórico de incidentes</h2>
+          <p class="card-sub">Registrados automaticamente pelo monitor ou adicionados pela equipe</p>
+        </div>
+        <div id="incidents"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Verificações automáticas a cada ~5 minutos, feitas de fora da aplicação, acessando os endereços
+          públicos como um visitante. Períodos sem verificação aparecem como “Sem dados”. Horários de Brasília.
+        </p>
+        <p>
+          <a href="https://barbearia.hostcapixaba.com.br/">Ir para o BarberPro</a>
+        </p>
+      </div>
+    </footer>
+
+    <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+    <noscript>
+      <p class="container notice notice-warning">Ative o JavaScript para ver o status atual.</p>
+    </noscript>
+  </body>
+</html>
