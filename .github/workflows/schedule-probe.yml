@@ -1,0 +1,19 @@
+# Sonda de diagnóstico: o agendador do GitHub nunca disparou o workflow
+# Monitor neste repositório. Este workflow mínimo (sem checkout, ~5 s) só
+# registra se QUALQUER agendamento dispara aqui. Remover quando o diagnóstico
+# estiver concluído.
+name: Schedule probe
+
+on:
+  schedule:
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - run: echo "schedule probe ${{ github.event_name }} $(date -u +%FT%TZ)"

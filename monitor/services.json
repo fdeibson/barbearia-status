@@ -1,0 +1,29 @@
+{
+  "baseUrl": "https://barbearia.hostcapixaba.com.br",
+  "services": [
+    {
+      "id": "web",
+      "name": "Aplicação web",
+      "description": "Login e painel da barbearia",
+      "type": "http",
+      "path": "/login",
+      "expectStatus": 200
+    },
+    {
+      "id": "booking",
+      "name": "Página pública de agendamento",
+      "description": "Página onde o cliente agenda o horário",
+      "type": "http",
+      "path": "/b/barbearia-teste",
+      "expectStatus": 200
+    },
+    {
+      "id": "api-db",
+      "name": "API e banco de dados",
+      "description": "Servidor da aplicação e conexão com o banco",
+      "type": "health",
+      "path": "/api/health",
+      "expectStatus": 200
+    }
+  ]
+}
