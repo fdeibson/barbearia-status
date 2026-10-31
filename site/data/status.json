@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-31T09:45:45.345Z",
+ "generatedAt": "2026-10-31T09:50:23.501Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -10,9 +10,9 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-10-31T09:45:45.314Z",
-    "httpStatus": null,
-    "latencyMs": null
+    "checkedAt": "2026-10-31T09:50:23.499Z",
+    "httpStatus": 301,
+    "latencyMs": 475
    },
    "daily": {
     "2026-09-17": {
@@ -122,19 +122,13 @@
     },
     "2026-10-31": {
      "up": 0,
-     "down": 82,
+     "down": 83,
      "degraded": 0,
      "unknown": 0,
-     "total": 82
+     "total": 83
     }
    },
    "recent": [
-    {
-     "at": "2026-10-31T05:40:24.492Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 457
-    },
     {
      "at": "2026-10-31T05:45:23.432Z",
      "outcome": "down",
@@ -428,6 +422,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-10-31T09:50:23.499Z",
+     "outcome": "down",
+     "httpStatus": 301,
+     "latencyMs": 475
     }
    ],
    "description": "Login e painel da barbearia",
@@ -440,9 +440,9 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-10-31T09:45:45.345Z",
-    "httpStatus": null,
-    "latencyMs": null
+    "checkedAt": "2026-10-31T09:50:23.501Z",
+    "httpStatus": 301,
+    "latencyMs": 483
    },
    "daily": {
     "2026-09-17": {
@@ -552,19 +552,13 @@
     },
     "2026-10-31": {
      "up": 0,
-     "down": 82,
+     "down": 83,
      "degraded": 0,
      "unknown": 0,
-     "total": 82
+     "total": 83
     }
    },
    "recent": [
-    {
-     "at": "2026-10-31T05:40:24.493Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 456
-    },
     {
      "at": "2026-10-31T05:45:23.427Z",
      "outcome": "down",
@@ -858,6 +852,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-10-31T09:50:23.501Z",
+     "outcome": "down",
+     "httpStatus": 301,
+     "latencyMs": 483
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -869,10 +869,10 @@
    "url": "https://barbearia.hostcapixaba.com.br/api/health",
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
-    "state": "down",
-    "checkedAt": "2026-10-31T09:45:45.345Z",
-    "httpStatus": null,
-    "latencyMs": null
+    "state": "up",
+    "checkedAt": "2026-10-31T09:50:18.218Z",
+    "httpStatus": 200,
+    "latencyMs": 683
    },
    "daily": {
     "2026-09-17": {
@@ -981,20 +981,14 @@
      "total": 95
     },
     "2026-10-31": {
-     "up": 64,
+     "up": 65,
      "down": 17,
      "degraded": 1,
      "unknown": 0,
-     "total": 82
+     "total": 83
     }
    },
    "recent": [
-    {
-     "at": "2026-10-31T05:40:19.115Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 586
-    },
     {
      "at": "2026-10-31T05:45:18.409Z",
      "outcome": "up",
@@ -1288,6 +1282,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-10-31T09:50:18.218Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 683
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
@@ -1330,8 +1330,8 @@
    "serviceId": "api-db",
    "serviceName": "API e banco de dados",
    "startedAt": "2026-10-31T08:25:39.759Z",
-   "endedAt": null,
-   "status": "open",
+   "endedAt": "2026-10-31T09:50:18.218Z",
+   "status": "resolved",
    "auto": true,
    "description": "API e banco de dados ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
   }
