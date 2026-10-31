@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-31T08:25:39.759Z",
+ "generatedAt": "2026-10-31T08:30:46.417Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -10,7 +10,7 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-10-31T08:25:39.433Z",
+    "checkedAt": "2026-10-31T08:30:46.381Z",
     "httpStatus": null,
     "latencyMs": null
    },
@@ -122,19 +122,13 @@
     },
     "2026-10-31": {
      "up": 0,
-     "down": 66,
+     "down": 67,
      "degraded": 0,
      "unknown": 0,
-     "total": 66
+     "total": 67
     }
    },
    "recent": [
-    {
-     "at": "2026-10-31T04:20:27.013Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 411
-    },
     {
      "at": "2026-10-31T04:25:20.672Z",
      "outcome": "down",
@@ -428,6 +422,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-10-31T08:30:46.381Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Login e painel da barbearia",
@@ -440,7 +440,7 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-10-31T08:25:39.433Z",
+    "checkedAt": "2026-10-31T08:30:46.416Z",
     "httpStatus": null,
     "latencyMs": null
    },
@@ -552,19 +552,13 @@
     },
     "2026-10-31": {
      "up": 0,
-     "down": 66,
+     "down": 67,
      "degraded": 0,
      "unknown": 0,
-     "total": 66
+     "total": 67
     }
    },
    "recent": [
-    {
-     "at": "2026-10-31T04:20:27.014Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 409
-    },
     {
      "at": "2026-10-31T04:25:20.673Z",
      "outcome": "down",
@@ -858,6 +852,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-10-31T08:30:46.416Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -870,7 +870,7 @@
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
     "state": "down",
-    "checkedAt": "2026-10-31T08:25:39.759Z",
+    "checkedAt": "2026-10-31T08:30:46.417Z",
     "httpStatus": null,
     "latencyMs": null
    },
@@ -982,19 +982,13 @@
     },
     "2026-10-31": {
      "up": 64,
-     "down": 1,
+     "down": 2,
      "degraded": 1,
      "unknown": 0,
-     "total": 66
+     "total": 67
     }
    },
    "recent": [
-    {
-     "at": "2026-10-31T04:20:21.809Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 645
-    },
     {
      "at": "2026-10-31T04:25:15.551Z",
      "outcome": "up",
@@ -1288,6 +1282,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-10-31T08:30:46.417Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
@@ -1322,6 +1322,16 @@
    "startedAt": "2026-09-22T11:55:46.946Z",
    "endedAt": "2026-09-22T14:20:19.595Z",
    "status": "resolved",
+   "auto": true,
+   "description": "API e banco de dados ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
+  },
+  {
+   "id": "api-db-2026-10-31T08:25:39.759Z",
+   "serviceId": "api-db",
+   "serviceName": "API e banco de dados",
+   "startedAt": "2026-10-31T08:25:39.759Z",
+   "endedAt": null,
+   "status": "open",
    "auto": true,
    "description": "API e banco de dados ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
   }
