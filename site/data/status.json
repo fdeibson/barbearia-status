@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-06T23:15:25.111Z",
+ "generatedAt": "2026-11-06T23:20:25.547Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -10,9 +10,9 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-11-06T23:15:25.111Z",
+    "checkedAt": "2026-11-06T23:20:25.547Z",
     "httpStatus": 301,
-    "latencyMs": 430
+    "latencyMs": 462
    },
    "daily": {
     "2026-09-17": {
@@ -164,19 +164,13 @@
     },
     "2026-11-06": {
      "up": 0,
-     "down": 244,
+     "down": 245,
      "degraded": 0,
      "unknown": 0,
-     "total": 244
+     "total": 245
     }
    },
    "recent": [
-    {
-     "at": "2026-11-06T19:10:24.263Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 190
-    },
     {
      "at": "2026-11-06T19:15:25.514Z",
      "outcome": "down",
@@ -470,6 +464,12 @@
      "outcome": "down",
      "httpStatus": 301,
      "latencyMs": 430
+    },
+    {
+     "at": "2026-11-06T23:20:25.547Z",
+     "outcome": "down",
+     "httpStatus": 301,
+     "latencyMs": 462
     }
    ],
    "description": "Login e painel da barbearia",
@@ -482,9 +482,9 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-11-06T23:15:25.108Z",
+    "checkedAt": "2026-11-06T23:20:25.547Z",
     "httpStatus": 301,
-    "latencyMs": 429
+    "latencyMs": 465
    },
    "daily": {
     "2026-09-17": {
@@ -636,19 +636,13 @@
     },
     "2026-11-06": {
      "up": 0,
-     "down": 244,
+     "down": 245,
      "degraded": 0,
      "unknown": 0,
-     "total": 244
+     "total": 245
     }
    },
    "recent": [
-    {
-     "at": "2026-11-06T19:10:24.266Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 195
-    },
     {
      "at": "2026-11-06T19:15:24.483Z",
      "outcome": "down",
@@ -942,6 +936,12 @@
      "outcome": "down",
      "httpStatus": 301,
      "latencyMs": 429
+    },
+    {
+     "at": "2026-11-06T23:20:25.547Z",
+     "outcome": "down",
+     "httpStatus": 301,
+     "latencyMs": 465
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -954,9 +954,9 @@
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
     "state": "up",
-    "checkedAt": "2026-11-06T23:15:19.863Z",
+    "checkedAt": "2026-11-06T23:20:20.267Z",
     "httpStatus": 200,
-    "latencyMs": 516
+    "latencyMs": 697
    },
    "daily": {
     "2026-09-17": {
@@ -1107,20 +1107,14 @@
      "total": 284
     },
     "2026-11-06": {
-     "up": 244,
+     "up": 245,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 244
+     "total": 245
     }
    },
    "recent": [
-    {
-     "at": "2026-11-06T19:10:19.278Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 611
-    },
     {
      "at": "2026-11-06T19:15:18.815Z",
      "outcome": "up",
@@ -1414,6 +1408,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 516
+    },
+    {
+     "at": "2026-11-06T23:20:20.267Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 697
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
