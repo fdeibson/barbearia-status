@@ -40,7 +40,7 @@ async function probe(url) {
       cache: "no-store",
       signal: AbortSignal.timeout(TIMEOUT_MS),
       headers: {
-        "user-agent": "barberpro-status-monitor/1.0 (+https://barbearia.hostcapixaba.com.br/status)",
+        "user-agent": "studiune-status-monitor/1.0 (+https://studiune.com.br/status)",
         accept: "text/html,application/json;q=0.9,*/*;q=0.8",
       },
     });
