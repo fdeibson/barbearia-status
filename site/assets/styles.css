@@ -1,5 +1,5 @@
-/* Página de status do BarberPro — tokens espelham apps/web/src/app/globals.css
-   (off-white + preto da marca, Outfit nos títulos, Geist no corpo).
+/* Página de status do Studio Une — tokens espelham apps/web/src/app/globals.css
+   (porcelana + grafite da marca, Outfit nos títulos, Geist no corpo).
    Diferente do app, aqui existe tema escuro por preferência do sistema: é uma
    página informativa isolada, não a área de conteúdo do produto. */
 
@@ -17,13 +17,15 @@
 }
 
 :root {
-  --background: #f7f6f4;
-  --foreground: #17140f;
-  --surface: #ffffff;
-  --border: #e7e3da;
-  --muted: #6b645e;
-  --brand: #0b0b0d;
-  --brand-foreground: #f5f5f7;
+  /* Paleta Studio Une (docs/branding/studio-une): os hex vêm do guia da
+     marca, não de amostragem da prancha. */
+  --background: #f7f7f5; /* Porcelana */
+  --foreground: #252724; /* Grafite */
+  --surface: #ffffff; /* Branco */
+  --border: #e4e6e1; /* Névoa */
+  --muted: #686c66; /* Mineral */
+  --brand: #252724; /* Grafite — mesmo tom da sidebar do app */
+  --brand-foreground: #f7f7f5;
 
   --ok: #16a34a;
   --ok-text: #15803d;
@@ -46,13 +48,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b0b0d;
-    --foreground: #f5f5f7;
-    --surface: #151518;
-    --border: #2a292f;
-    --muted: #a3a2a8;
-    --brand: #151518;
-    --brand-foreground: #f5f5f7;
+    --background: #161715;
+    --foreground: #f7f7f5;
+    --surface: #1f211e;
+    --border: #33362f;
+    --muted: #a6aaa2;
+    --brand: #1f211e;
+    --brand-foreground: #f7f7f5;
 
     --ok: #22c55e;
     --ok-text: #4ade80;
@@ -151,14 +153,13 @@ a {
   text-decoration: none;
 }
 .brand img {
-  border-radius: 8px;
   display: block;
 }
-.brand-name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: -0.01em;
+/* A assinatura é arte, não texto: altura manda e a largura vem da proporção
+   real do arquivo (1328x191), pra marca não achatar em tela estreita. */
+.brand-lockup {
+  height: 20px;
+  width: auto;
 }
 .header-tag {
   font-size: 13px;

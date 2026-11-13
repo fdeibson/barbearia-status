@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Status do BarberPro</title>
+    <title>Status do Studio Une</title>
     <meta
       name="description"
-      content="Disponibilidade em tempo real do BarberPro: aplicação web, página de agendamento e API, com histórico de 90 dias e incidentes."
+      content="Disponibilidade em tempo real do Studio Une: aplicação web, página de agendamento e API, com histórico de 90 dias e incidentes."
     />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f7f6f4" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" type="image/png" href="assets/logo-icon.png" />
+    <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161715" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preload" href="assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="assets/styles.css" />
     <script type="module" src="assets/app.mjs"></script>
@@ -21,9 +21,12 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="https://barbearia.hostcapixaba.com.br/" aria-label="BarberPro — ir para o site">
-          <img src="assets/logo-icon.png" alt="" width="32" height="32" />
-          <span class="brand-name">BarberPro</span>
+        <a class="brand" href="https://studiune.com.br/" aria-label="Studio Une — ir para o site">
+          <!-- A marca é desenho próprio (símbolo + palavra), então entra como
+               imagem, nunca como o nome digitado numa fonte qualquer. A arte
+               clara é a que existe pra fundo escuro, que é o deste cabeçalho.
+               Largura = altura x 1328/191, a proporção real do arquivo. -->
+          <img class="brand-lockup" src="assets/studio-une-clara.png" alt="Studio Une" width="139" height="20" />
         </a>
         <span class="header-tag">Status do sistema</span>
       </div>
@@ -74,7 +77,7 @@
           públicos como um visitante. Períodos sem verificação aparecem como “Sem dados”. Horários de Brasília.
         </p>
         <p>
-          <a href="https://barbearia.hostcapixaba.com.br/">Ir para o BarberPro</a>
+          <a href="https://studiune.com.br/">Ir para o Studio Une</a>
         </p>
       </div>
     </footer>

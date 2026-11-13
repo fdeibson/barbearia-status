@@ -177,7 +177,7 @@ function renderStaleWarning(data, now) {
     box.textContent =
       `Os dados de monitoramento estão desatualizados: a última verificação foi ${relativeAge(data.generatedAt, now)} ` +
       `(o esperado é a cada ~5 min; acima de ${STALE_AFTER_MINUTES} min o estado passa a ser considerado desconhecido). ` +
-      "Isso indica atraso do monitor, não necessariamente um problema no BarberPro.";
+      "Isso indica atraso do monitor, não necessariamente um problema no Studio Une.";
     box.hidden = false;
   } else {
     box.hidden = true;
