@@ -1,18 +1,18 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-13T02:05:22.357Z",
+ "generatedAt": "2026-11-13T02:10:21.500Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
    "id": "web",
    "name": "Aplicação web",
-   "url": "https://barbearia.hostcapixaba.com.br/login",
+   "url": "https://studiune.com.br/login",
    "firstSeenOkAt": null,
    "current": {
-    "state": "down",
-    "checkedAt": "2026-11-13T02:05:22.357Z",
-    "httpStatus": 301,
-    "latencyMs": 453
+    "state": "up",
+    "checkedAt": "2026-11-13T02:10:21.095Z",
+    "httpStatus": 200,
+    "latencyMs": 680
    },
    "daily": {
     "2026-09-17": {
@@ -205,20 +205,14 @@
      "total": 280
     },
     "2026-11-12": {
-     "up": 0,
+     "up": 1,
      "down": 274,
      "degraded": 0,
      "unknown": 0,
-     "total": 274
+     "total": 275
     }
    },
    "recent": [
-    {
-     "at": "2026-11-12T22:00:32.686Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 489
-    },
     {
      "at": "2026-11-12T22:05:22.061Z",
      "outcome": "down",
@@ -512,21 +506,27 @@
      "outcome": "down",
      "httpStatus": 301,
      "latencyMs": 453
+    },
+    {
+     "at": "2026-11-13T02:10:21.095Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 680
     }
    ],
-   "description": "Login e painel da barbearia",
+   "description": "Login e painel do negócio",
    "type": "http"
   },
   {
    "id": "booking",
    "name": "Página pública de agendamento",
-   "url": "https://barbearia.hostcapixaba.com.br/b/barbearia-teste",
+   "url": "https://studiune.com.br/b/barbearia-teste",
    "firstSeenOkAt": null,
    "current": {
-    "state": "down",
-    "checkedAt": "2026-11-13T02:05:22.350Z",
-    "httpStatus": 301,
-    "latencyMs": 449
+    "state": "up",
+    "checkedAt": "2026-11-13T02:10:21.107Z",
+    "httpStatus": 200,
+    "latencyMs": 659
    },
    "daily": {
     "2026-09-17": {
@@ -719,20 +719,14 @@
      "total": 280
     },
     "2026-11-12": {
-     "up": 0,
+     "up": 1,
      "down": 274,
      "degraded": 0,
      "unknown": 0,
-     "total": 274
+     "total": 275
     }
    },
    "recent": [
-    {
-     "at": "2026-11-12T22:00:32.677Z",
-     "outcome": "down",
-     "httpStatus": 301,
-     "latencyMs": 482
-    },
     {
      "at": "2026-11-12T22:05:22.058Z",
      "outcome": "down",
@@ -1026,6 +1020,12 @@
      "outcome": "down",
      "httpStatus": 301,
      "latencyMs": 449
+    },
+    {
+     "at": "2026-11-13T02:10:21.107Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 659
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -1034,13 +1034,13 @@
   {
    "id": "api-db",
    "name": "API e banco de dados",
-   "url": "https://barbearia.hostcapixaba.com.br/api/health",
+   "url": "https://studiune.com.br/api/health",
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
     "state": "up",
-    "checkedAt": "2026-11-13T02:05:16.985Z",
+    "checkedAt": "2026-11-13T02:10:21.500Z",
     "httpStatus": 200,
-    "latencyMs": 554
+    "latencyMs": 1051
    },
    "daily": {
     "2026-09-17": {
@@ -1233,20 +1233,14 @@
      "total": 280
     },
     "2026-11-12": {
-     "up": 274,
+     "up": 275,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 274
+     "total": 275
     }
    },
    "recent": [
-    {
-     "at": "2026-11-12T22:00:27.384Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 675
-    },
     {
      "at": "2026-11-12T22:05:16.746Z",
      "outcome": "up",
@@ -1540,6 +1534,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 554
+    },
+    {
+     "at": "2026-11-13T02:10:21.500Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 1051
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
@@ -1552,8 +1552,8 @@
    "serviceId": "web",
    "serviceName": "Aplicação web",
    "startedAt": "2026-09-19T05:40:25.713Z",
-   "endedAt": null,
-   "status": "open",
+   "endedAt": "2026-11-13T02:10:21.095Z",
+   "status": "resolved",
    "auto": true,
    "description": "Aplicação web ficou indisponível — 2 verificações seguidas falharam (resposta HTTP 301 inesperada)."
   },
@@ -1562,8 +1562,8 @@
    "serviceId": "booking",
    "serviceName": "Página pública de agendamento",
    "startedAt": "2026-09-19T05:40:25.705Z",
-   "endedAt": null,
-   "status": "open",
+   "endedAt": "2026-11-13T02:10:21.107Z",
+   "status": "resolved",
    "auto": true,
    "description": "Página pública de agendamento ficou indisponível — 2 verificações seguidas falharam (resposta HTTP 301 inesperada)."
   },
