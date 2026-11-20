@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-20T19:40:52.176Z",
+ "generatedAt": "2026-11-20T19:45:48.344Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -10,7 +10,7 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-11-20T19:40:50.858Z",
+    "checkedAt": "2026-11-20T19:45:48.222Z",
     "httpStatus": null,
     "latencyMs": null
    },
@@ -262,19 +262,13 @@
     },
     "2026-11-20": {
      "up": 198,
-     "down": 3,
+     "down": 4,
      "degraded": 0,
      "unknown": 0,
-     "total": 201
+     "total": 202
     }
    },
    "recent": [
-    {
-     "at": "2026-11-20T15:35:20.383Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 686
-    },
     {
      "at": "2026-11-20T15:40:20.729Z",
      "outcome": "up",
@@ -568,6 +562,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-11-20T19:45:48.222Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Login e painel do negócio",
@@ -580,7 +580,7 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "down",
-    "checkedAt": "2026-11-20T19:40:52.176Z",
+    "checkedAt": "2026-11-20T19:45:48.343Z",
     "httpStatus": null,
     "latencyMs": null
    },
@@ -832,19 +832,13 @@
     },
     "2026-11-20": {
      "up": 198,
-     "down": 3,
+     "down": 4,
      "degraded": 0,
      "unknown": 0,
-     "total": 201
+     "total": 202
     }
    },
    "recent": [
-    {
-     "at": "2026-11-20T15:35:20.392Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 643
-    },
     {
      "at": "2026-11-20T15:40:20.734Z",
      "outcome": "up",
@@ -1138,6 +1132,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-11-20T19:45:48.343Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -1150,7 +1150,7 @@
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
     "state": "down",
-    "checkedAt": "2026-11-20T19:40:52.176Z",
+    "checkedAt": "2026-11-20T19:45:48.344Z",
     "httpStatus": null,
     "latencyMs": null
    },
@@ -1402,19 +1402,13 @@
     },
     "2026-11-20": {
      "up": 198,
-     "down": 3,
+     "down": 4,
      "degraded": 0,
      "unknown": 0,
-     "total": 201
+     "total": 202
     }
    },
    "recent": [
-    {
-     "at": "2026-11-20T15:35:20.923Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 1173
-    },
     {
      "at": "2026-11-20T15:40:21.028Z",
      "outcome": "up",
@@ -1708,6 +1702,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-11-20T19:45:48.344Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
@@ -1782,6 +1782,36 @@
    "startedAt": "2026-11-20T10:55:41.662Z",
    "endedAt": "2026-11-20T11:05:32.065Z",
    "status": "resolved",
+   "auto": true,
+   "description": "API e banco de dados ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
+  },
+  {
+   "id": "web-2026-11-20T19:40:50.858Z",
+   "serviceId": "web",
+   "serviceName": "Aplicação web",
+   "startedAt": "2026-11-20T19:40:50.858Z",
+   "endedAt": null,
+   "status": "open",
+   "auto": true,
+   "description": "Aplicação web ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
+  },
+  {
+   "id": "booking-2026-11-20T19:40:52.176Z",
+   "serviceId": "booking",
+   "serviceName": "Página pública de agendamento",
+   "startedAt": "2026-11-20T19:40:52.176Z",
+   "endedAt": null,
+   "status": "open",
+   "auto": true,
+   "description": "Página pública de agendamento ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
+  },
+  {
+   "id": "api-db-2026-11-20T19:40:52.176Z",
+   "serviceId": "api-db",
+   "serviceName": "API e banco de dados",
+   "startedAt": "2026-11-20T19:40:52.176Z",
+   "endedAt": null,
+   "status": "open",
    "auto": true,
    "description": "API e banco de dados ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
   }
