@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-20T11:00:53.534Z",
+ "generatedAt": "2026-11-20T11:05:32.072Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -9,10 +9,10 @@
    "url": "https://studiune.com.br/login",
    "firstSeenOkAt": null,
    "current": {
-    "state": "down",
-    "checkedAt": "2026-11-20T11:00:53.489Z",
-    "httpStatus": null,
-    "latencyMs": null
+    "state": "up",
+    "checkedAt": "2026-11-20T11:05:32.061Z",
+    "httpStatus": 200,
+    "latencyMs": 518
    },
    "daily": {
     "2026-09-17": {
@@ -261,20 +261,14 @@
      "total": 288
     },
     "2026-11-20": {
-     "up": 95,
+     "up": 96,
      "down": 2,
      "degraded": 0,
      "unknown": 0,
-     "total": 97
+     "total": 98
     }
    },
    "recent": [
-    {
-     "at": "2026-11-20T06:55:17.581Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 610
-    },
     {
      "at": "2026-11-20T07:00:30.633Z",
      "outcome": "up",
@@ -568,6 +562,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-11-20T11:05:32.061Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 518
     }
    ],
    "description": "Login e painel do negócio",
@@ -579,10 +579,10 @@
    "url": "https://studiune.com.br/b/barbearia-teste",
    "firstSeenOkAt": null,
    "current": {
-    "state": "down",
-    "checkedAt": "2026-11-20T11:00:53.532Z",
-    "httpStatus": null,
-    "latencyMs": null
+    "state": "up",
+    "checkedAt": "2026-11-20T11:05:32.072Z",
+    "httpStatus": 200,
+    "latencyMs": 403
    },
    "daily": {
     "2026-09-17": {
@@ -831,20 +831,14 @@
      "total": 288
     },
     "2026-11-20": {
-     "up": 95,
+     "up": 96,
      "down": 2,
      "degraded": 0,
      "unknown": 0,
-     "total": 97
+     "total": 98
     }
    },
    "recent": [
-    {
-     "at": "2026-11-20T06:55:17.595Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 582
-    },
     {
      "at": "2026-11-20T07:00:30.643Z",
      "outcome": "up",
@@ -1138,6 +1132,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-11-20T11:05:32.072Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 403
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -1149,10 +1149,10 @@
    "url": "https://studiune.com.br/api/health",
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
-    "state": "down",
-    "checkedAt": "2026-11-20T11:00:53.534Z",
-    "httpStatus": null,
-    "latencyMs": null
+    "state": "up",
+    "checkedAt": "2026-11-20T11:05:32.065Z",
+    "httpStatus": 200,
+    "latencyMs": 395
    },
    "daily": {
     "2026-09-17": {
@@ -1401,20 +1401,14 @@
      "total": 288
     },
     "2026-11-20": {
-     "up": 95,
+     "up": 96,
      "down": 2,
      "degraded": 0,
      "unknown": 0,
-     "total": 97
+     "total": 98
     }
    },
    "recent": [
-    {
-     "at": "2026-11-20T06:55:17.586Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 572
-    },
     {
      "at": "2026-11-20T07:00:30.994Z",
      "outcome": "up",
@@ -1708,6 +1702,12 @@
      "outcome": "down",
      "httpStatus": null,
      "latencyMs": null
+    },
+    {
+     "at": "2026-11-20T11:05:32.065Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 395
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
@@ -1760,8 +1760,8 @@
    "serviceId": "web",
    "serviceName": "Aplicação web",
    "startedAt": "2026-11-20T10:55:41.617Z",
-   "endedAt": null,
-   "status": "open",
+   "endedAt": "2026-11-20T11:05:32.061Z",
+   "status": "resolved",
    "auto": true,
    "description": "Aplicação web ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
   },
@@ -1770,8 +1770,8 @@
    "serviceId": "booking",
    "serviceName": "Página pública de agendamento",
    "startedAt": "2026-11-20T10:55:41.662Z",
-   "endedAt": null,
-   "status": "open",
+   "endedAt": "2026-11-20T11:05:32.072Z",
+   "status": "resolved",
    "auto": true,
    "description": "Página pública de agendamento ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
   },
@@ -1780,8 +1780,8 @@
    "serviceId": "api-db",
    "serviceName": "API e banco de dados",
    "startedAt": "2026-11-20T10:55:41.662Z",
-   "endedAt": null,
-   "status": "open",
+   "endedAt": "2026-11-20T11:05:32.065Z",
+   "status": "resolved",
    "auto": true,
    "description": "API e banco de dados ficou indisponível — 2 verificações seguidas falharam (sem resposta: tempo esgotado ou falha de conexão)."
   }
