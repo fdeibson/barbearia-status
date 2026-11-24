@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-24T14:35:20.588Z",
+ "generatedAt": "2026-11-24T14:40:33.538Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -9,10 +9,10 @@
    "url": "https://studiune.com.br/login",
    "firstSeenOkAt": null,
    "current": {
-    "state": "up",
-    "checkedAt": "2026-11-24T14:35:20.575Z",
-    "httpStatus": 200,
-    "latencyMs": 694
+    "state": "down",
+    "checkedAt": "2026-11-24T14:40:32.383Z",
+    "httpStatus": null,
+    "latencyMs": null
    },
    "daily": {
     "2026-09-17": {
@@ -290,19 +290,13 @@
     },
     "2026-11-24": {
      "up": 139,
-     "down": 1,
+     "down": 2,
      "degraded": 0,
      "unknown": 0,
-     "total": 140
+     "total": 141
     }
    },
    "recent": [
-    {
-     "at": "2026-11-24T10:30:28.003Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 665
-    },
     {
      "at": "2026-11-24T10:35:23.963Z",
      "outcome": "up",
@@ -596,6 +590,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 694
+    },
+    {
+     "at": "2026-11-24T14:40:32.383Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Login e painel do negócio",
@@ -607,10 +607,10 @@
    "url": "https://studiune.com.br/b/barbearia-teste",
    "firstSeenOkAt": null,
    "current": {
-    "state": "up",
-    "checkedAt": "2026-11-24T14:35:20.588Z",
-    "httpStatus": 200,
-    "latencyMs": 646
+    "state": "down",
+    "checkedAt": "2026-11-24T14:40:32.382Z",
+    "httpStatus": null,
+    "latencyMs": null
    },
    "daily": {
     "2026-09-17": {
@@ -888,19 +888,13 @@
     },
     "2026-11-24": {
      "up": 139,
-     "down": 1,
+     "down": 2,
      "degraded": 0,
      "unknown": 0,
-     "total": 140
+     "total": 141
     }
    },
    "recent": [
-    {
-     "at": "2026-11-24T10:30:28.018Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 646
-    },
     {
      "at": "2026-11-24T10:35:23.967Z",
      "outcome": "up",
@@ -1194,6 +1188,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 646
+    },
+    {
+     "at": "2026-11-24T14:40:32.382Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -1205,10 +1205,10 @@
    "url": "https://studiune.com.br/api/health",
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
-    "state": "up",
-    "checkedAt": "2026-11-24T14:35:20.579Z",
-    "httpStatus": 200,
-    "latencyMs": 636
+    "state": "down",
+    "checkedAt": "2026-11-24T14:40:33.538Z",
+    "httpStatus": null,
+    "latencyMs": null
    },
    "daily": {
     "2026-09-17": {
@@ -1486,19 +1486,13 @@
     },
     "2026-11-24": {
      "up": 139,
-     "down": 1,
+     "down": 2,
      "degraded": 0,
      "unknown": 0,
-     "total": 140
+     "total": 141
     }
    },
    "recent": [
-    {
-     "at": "2026-11-24T10:30:28.382Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 1009
-    },
     {
      "at": "2026-11-24T10:35:23.959Z",
      "outcome": "up",
@@ -1792,6 +1786,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 636
+    },
+    {
+     "at": "2026-11-24T14:40:33.538Z",
+     "outcome": "down",
+     "httpStatus": null,
+     "latencyMs": null
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
