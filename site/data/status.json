@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-11-28T17:05:17.194Z",
+ "generatedAt": "2026-11-28T17:10:22.336Z",
  "monitoringSince": "2026-09-17T12:43:37.757Z",
  "services": [
   {
@@ -10,7 +10,633 @@
    "firstSeenOkAt": null,
    "current": {
     "state": "up",
-    "checkedAt": "2026-11-28T17:05:16.863Z",
+    "checkedAt": "2026-11-28T17:10:22.109Z",
+    "httpStatus": 200,
+    "latencyMs": 775
+   },
+   "daily": {
+    "2026-09-17": {
+     "up": 146,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 146
+    },
+    "2026-09-18": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-19": {
+     "up": 32,
+     "down": 256,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-20": {
+     "up": 0,
+     "down": 287,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 287
+    },
+    "2026-09-21": {
+     "up": 0,
+     "down": 287,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 287
+    },
+    "2026-09-22": {
+     "up": 0,
+     "down": 285,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 285
+    },
+    "2026-09-23": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-24": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-25": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-26": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-27": {
+     "up": 0,
+     "down": 287,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 287
+    },
+    "2026-09-28": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-29": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-09-30": {
+     "up": 0,
+     "down": 193,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 193
+    },
+    "2026-10-30": {
+     "up": 0,
+     "down": 95,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 95
+    },
+    "2026-10-31": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-01": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-02": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-03": {
+     "up": 0,
+     "down": 287,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 287
+    },
+    "2026-11-04": {
+     "up": 0,
+     "down": 276,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 276
+    },
+    "2026-11-05": {
+     "up": 0,
+     "down": 284,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 284
+    },
+    "2026-11-06": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-07": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-08": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-09": {
+     "up": 0,
+     "down": 287,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 287
+    },
+    "2026-11-10": {
+     "up": 0,
+     "down": 288,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-11": {
+     "up": 0,
+     "down": 280,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 280
+    },
+    "2026-11-12": {
+     "up": 10,
+     "down": 274,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 284
+    },
+    "2026-11-13": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-14": {
+     "up": 287,
+     "down": 0,
+     "degraded": 1,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-15": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-16": {
+     "up": 287,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 287
+    },
+    "2026-11-17": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-18": {
+     "up": 287,
+     "down": 0,
+     "degraded": 1,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-19": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-20": {
+     "up": 282,
+     "down": 6,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-21": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-22": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-23": {
+     "up": 287,
+     "down": 0,
+     "degraded": 1,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-24": {
+     "up": 164,
+     "down": 124,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-25": {
+     "up": 286,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 286
+    },
+    "2026-11-26": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-27": {
+     "up": 288,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 288
+    },
+    "2026-11-28": {
+     "up": 171,
+     "down": 0,
+     "degraded": 0,
+     "unknown": 0,
+     "total": 171
+    }
+   },
+   "recent": [
+    {
+     "at": "2026-11-28T13:05:18.798Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 694
+    },
+    {
+     "at": "2026-11-28T13:10:20.631Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 767
+    },
+    {
+     "at": "2026-11-28T13:15:19.918Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 618
+    },
+    {
+     "at": "2026-11-28T13:20:21.107Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 720
+    },
+    {
+     "at": "2026-11-28T13:25:18.423Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 654
+    },
+    {
+     "at": "2026-11-28T13:30:26.157Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 684
+    },
+    {
+     "at": "2026-11-28T13:35:16.705Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 657
+    },
+    {
+     "at": "2026-11-28T13:40:27.526Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 705
+    },
+    {
+     "at": "2026-11-28T13:45:20.837Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 676
+    },
+    {
+     "at": "2026-11-28T13:50:20.628Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 652
+    },
+    {
+     "at": "2026-11-28T13:55:24.150Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 516
+    },
+    {
+     "at": "2026-11-28T14:00:27.375Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 559
+    },
+    {
+     "at": "2026-11-28T14:05:17.004Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 657
+    },
+    {
+     "at": "2026-11-28T14:10:22.795Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 689
+    },
+    {
+     "at": "2026-11-28T14:15:19.797Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 660
+    },
+    {
+     "at": "2026-11-28T14:20:25.819Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 829
+    },
+    {
+     "at": "2026-11-28T14:25:17.503Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 656
+    },
+    {
+     "at": "2026-11-28T14:30:24.668Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 760
+    },
+    {
+     "at": "2026-11-28T14:35:19.758Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 835
+    },
+    {
+     "at": "2026-11-28T14:40:20.323Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 670
+    },
+    {
+     "at": "2026-11-28T14:45:19.494Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 587
+    },
+    {
+     "at": "2026-11-28T14:50:24.544Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 654
+    },
+    {
+     "at": "2026-11-28T14:55:20.264Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 792
+    },
+    {
+     "at": "2026-11-28T15:00:29.237Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 636
+    },
+    {
+     "at": "2026-11-28T15:05:20.260Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 683
+    },
+    {
+     "at": "2026-11-28T15:10:22.709Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 829
+    },
+    {
+     "at": "2026-11-28T15:15:19.149Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 639
+    },
+    {
+     "at": "2026-11-28T15:20:22.788Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 778
+    },
+    {
+     "at": "2026-11-28T15:25:17.180Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 674
+    },
+    {
+     "at": "2026-11-28T15:30:25.236Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 693
+    },
+    {
+     "at": "2026-11-28T15:35:25.362Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 552
+    },
+    {
+     "at": "2026-11-28T15:40:19.935Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 666
+    },
+    {
+     "at": "2026-11-28T15:45:23.078Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 713
+    },
+    {
+     "at": "2026-11-28T15:50:23.789Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 714
+    },
+    {
+     "at": "2026-11-28T15:55:23.648Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 593
+    },
+    {
+     "at": "2026-11-28T16:00:30.627Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 652
+    },
+    {
+     "at": "2026-11-28T16:05:18.116Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 713
+    },
+    {
+     "at": "2026-11-28T16:10:21.514Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 667
+    },
+    {
+     "at": "2026-11-28T16:15:20.687Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 650
+    },
+    {
+     "at": "2026-11-28T16:20:20.250Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 602
+    },
+    {
+     "at": "2026-11-28T16:25:17.444Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 633
+    },
+    {
+     "at": "2026-11-28T16:30:28.346Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 848
+    },
+    {
+     "at": "2026-11-28T16:35:19.088Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 892
+    },
+    {
+     "at": "2026-11-28T16:40:19.981Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 579
+    },
+    {
+     "at": "2026-11-28T16:45:19.984Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 613
+    },
+    {
+     "at": "2026-11-28T16:50:28.127Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 566
+    },
+    {
+     "at": "2026-11-28T16:55:18.853Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 656
+    },
+    {
+     "at": "2026-11-28T17:00:31.564Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 670
+    },
+    {
+     "at": "2026-11-28T17:05:16.863Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 664
+    },
+    {
+     "at": "2026-11-28T17:10:22.109Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 775
+    }
+   ],
+   "description": "Login e painel do negócio",
+   "type": "http"
+  },
+  {
+   "id": "booking",
+   "name": "Página pública de agendamento",
+   "url": "https://studiune.com.br/b/barbearia-teste",
+   "firstSeenOkAt": null,
+   "current": {
+    "state": "up",
+    "checkedAt": "2026-11-28T17:10:22.116Z",
     "httpStatus": 200,
     "latencyMs": 664
    },
@@ -317,646 +943,14 @@
      "total": 288
     },
     "2026-11-28": {
-     "up": 170,
+     "up": 171,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 170
+     "total": 171
     }
    },
    "recent": [
-    {
-     "at": "2026-11-28T13:00:31.361Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 672
-    },
-    {
-     "at": "2026-11-28T13:05:18.798Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 694
-    },
-    {
-     "at": "2026-11-28T13:10:20.631Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 767
-    },
-    {
-     "at": "2026-11-28T13:15:19.918Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 618
-    },
-    {
-     "at": "2026-11-28T13:20:21.107Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 720
-    },
-    {
-     "at": "2026-11-28T13:25:18.423Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 654
-    },
-    {
-     "at": "2026-11-28T13:30:26.157Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 684
-    },
-    {
-     "at": "2026-11-28T13:35:16.705Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 657
-    },
-    {
-     "at": "2026-11-28T13:40:27.526Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 705
-    },
-    {
-     "at": "2026-11-28T13:45:20.837Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 676
-    },
-    {
-     "at": "2026-11-28T13:50:20.628Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 652
-    },
-    {
-     "at": "2026-11-28T13:55:24.150Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 516
-    },
-    {
-     "at": "2026-11-28T14:00:27.375Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 559
-    },
-    {
-     "at": "2026-11-28T14:05:17.004Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 657
-    },
-    {
-     "at": "2026-11-28T14:10:22.795Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 689
-    },
-    {
-     "at": "2026-11-28T14:15:19.797Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 660
-    },
-    {
-     "at": "2026-11-28T14:20:25.819Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 829
-    },
-    {
-     "at": "2026-11-28T14:25:17.503Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 656
-    },
-    {
-     "at": "2026-11-28T14:30:24.668Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 760
-    },
-    {
-     "at": "2026-11-28T14:35:19.758Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 835
-    },
-    {
-     "at": "2026-11-28T14:40:20.323Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 670
-    },
-    {
-     "at": "2026-11-28T14:45:19.494Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 587
-    },
-    {
-     "at": "2026-11-28T14:50:24.544Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 654
-    },
-    {
-     "at": "2026-11-28T14:55:20.264Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 792
-    },
-    {
-     "at": "2026-11-28T15:00:29.237Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 636
-    },
-    {
-     "at": "2026-11-28T15:05:20.260Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 683
-    },
-    {
-     "at": "2026-11-28T15:10:22.709Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 829
-    },
-    {
-     "at": "2026-11-28T15:15:19.149Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 639
-    },
-    {
-     "at": "2026-11-28T15:20:22.788Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 778
-    },
-    {
-     "at": "2026-11-28T15:25:17.180Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 674
-    },
-    {
-     "at": "2026-11-28T15:30:25.236Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 693
-    },
-    {
-     "at": "2026-11-28T15:35:25.362Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 552
-    },
-    {
-     "at": "2026-11-28T15:40:19.935Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 666
-    },
-    {
-     "at": "2026-11-28T15:45:23.078Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 713
-    },
-    {
-     "at": "2026-11-28T15:50:23.789Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 714
-    },
-    {
-     "at": "2026-11-28T15:55:23.648Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 593
-    },
-    {
-     "at": "2026-11-28T16:00:30.627Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 652
-    },
-    {
-     "at": "2026-11-28T16:05:18.116Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 713
-    },
-    {
-     "at": "2026-11-28T16:10:21.514Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 667
-    },
-    {
-     "at": "2026-11-28T16:15:20.687Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 650
-    },
-    {
-     "at": "2026-11-28T16:20:20.250Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 602
-    },
-    {
-     "at": "2026-11-28T16:25:17.444Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 633
-    },
-    {
-     "at": "2026-11-28T16:30:28.346Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 848
-    },
-    {
-     "at": "2026-11-28T16:35:19.088Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 892
-    },
-    {
-     "at": "2026-11-28T16:40:19.981Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 579
-    },
-    {
-     "at": "2026-11-28T16:45:19.984Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 613
-    },
-    {
-     "at": "2026-11-28T16:50:28.127Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 566
-    },
-    {
-     "at": "2026-11-28T16:55:18.853Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 656
-    },
-    {
-     "at": "2026-11-28T17:00:31.564Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 670
-    },
-    {
-     "at": "2026-11-28T17:05:16.863Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 664
-    }
-   ],
-   "description": "Login e painel do negócio",
-   "type": "http"
-  },
-  {
-   "id": "booking",
-   "name": "Página pública de agendamento",
-   "url": "https://studiune.com.br/b/barbearia-teste",
-   "firstSeenOkAt": null,
-   "current": {
-    "state": "up",
-    "checkedAt": "2026-11-28T17:05:16.874Z",
-    "httpStatus": 200,
-    "latencyMs": 645
-   },
-   "daily": {
-    "2026-09-17": {
-     "up": 146,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 146
-    },
-    "2026-09-18": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-19": {
-     "up": 32,
-     "down": 256,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-20": {
-     "up": 0,
-     "down": 287,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 287
-    },
-    "2026-09-21": {
-     "up": 0,
-     "down": 287,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 287
-    },
-    "2026-09-22": {
-     "up": 0,
-     "down": 285,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 285
-    },
-    "2026-09-23": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-24": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-25": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-26": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-27": {
-     "up": 0,
-     "down": 287,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 287
-    },
-    "2026-09-28": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-29": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-09-30": {
-     "up": 0,
-     "down": 193,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 193
-    },
-    "2026-10-30": {
-     "up": 0,
-     "down": 95,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 95
-    },
-    "2026-10-31": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-01": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-02": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-03": {
-     "up": 0,
-     "down": 287,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 287
-    },
-    "2026-11-04": {
-     "up": 0,
-     "down": 276,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 276
-    },
-    "2026-11-05": {
-     "up": 0,
-     "down": 284,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 284
-    },
-    "2026-11-06": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-07": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-08": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-09": {
-     "up": 0,
-     "down": 287,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 287
-    },
-    "2026-11-10": {
-     "up": 0,
-     "down": 288,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-11": {
-     "up": 0,
-     "down": 280,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 280
-    },
-    "2026-11-12": {
-     "up": 10,
-     "down": 274,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 284
-    },
-    "2026-11-13": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-14": {
-     "up": 287,
-     "down": 0,
-     "degraded": 1,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-15": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-16": {
-     "up": 287,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 287
-    },
-    "2026-11-17": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-18": {
-     "up": 287,
-     "down": 0,
-     "degraded": 1,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-19": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-20": {
-     "up": 282,
-     "down": 6,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-21": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-22": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-23": {
-     "up": 287,
-     "down": 0,
-     "degraded": 1,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-24": {
-     "up": 164,
-     "down": 124,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-25": {
-     "up": 286,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 286
-    },
-    "2026-11-26": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-27": {
-     "up": 288,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 288
-    },
-    "2026-11-28": {
-     "up": 170,
-     "down": 0,
-     "degraded": 0,
-     "unknown": 0,
-     "total": 170
-    }
-   },
-   "recent": [
-    {
-     "at": "2026-11-28T13:00:31.369Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 634
-    },
     {
      "at": "2026-11-28T13:05:18.812Z",
      "outcome": "up",
@@ -1250,6 +1244,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 645
+    },
+    {
+     "at": "2026-11-28T17:10:22.116Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 664
     }
    ],
    "description": "Página onde o cliente agenda o horário",
@@ -1262,9 +1262,9 @@
    "firstSeenOkAt": "2026-09-17T12:43:37.757Z",
    "current": {
     "state": "up",
-    "checkedAt": "2026-11-28T17:05:17.194Z",
+    "checkedAt": "2026-11-28T17:10:22.336Z",
     "httpStatus": 200,
-    "latencyMs": 965
+    "latencyMs": 883
    },
    "daily": {
     "2026-09-17": {
@@ -1569,20 +1569,14 @@
      "total": 288
     },
     "2026-11-28": {
-     "up": 170,
+     "up": 171,
      "down": 0,
      "degraded": 0,
      "unknown": 0,
-     "total": 170
+     "total": 171
     }
    },
    "recent": [
-    {
-     "at": "2026-11-28T13:00:31.728Z",
-     "outcome": "up",
-     "httpStatus": 200,
-     "latencyMs": 991
-    },
     {
      "at": "2026-11-28T13:05:19.085Z",
      "outcome": "up",
@@ -1876,6 +1870,12 @@
      "outcome": "up",
      "httpStatus": 200,
      "latencyMs": 965
+    },
+    {
+     "at": "2026-11-28T17:10:22.336Z",
+     "outcome": "up",
+     "httpStatus": 200,
+     "latencyMs": 883
     }
    ],
    "description": "Servidor da aplicação e conexão com o banco",
